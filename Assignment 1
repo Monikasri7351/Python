@@ -1,1 +1,19 @@
+base_rate = 32.00
+step_value = 0.45
+bonus_rate = 0.50
+fat = float(input("Enter fat reading: "))
+snf = float(input("Enter SNF reading: "))
+steps = int(input("Enter number of steps: "))
+litres = float(input("Enter litres supplied in 10 days: "))
+milk_price = base_rate + (steps * step_value)
+if litres > 500:
+    bonus = litres * bonus_rate
+else:
+    bonus = 0
+total = (milk_price * litres) + bonus
+print("Fat:", format(fat, ".2f"))
+print("SNF:", format(snf, ".2f"))
+print("Milk price: R", format(milk_price, ".2f"))
+print("Bonus: R", format(bonus, ".2f"))
+print("Total payment: R", format(total, ".2f"))
 
