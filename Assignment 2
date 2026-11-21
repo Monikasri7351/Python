@@ -1,1 +1,30 @@
 
+
+# Redesigned Milk Analyser
+
+base_rate = 32.00
+step_value = 0.45
+
+farmers = int(input("Enter number of farmers: "))
+
+for i in range(farmers):
+    print("Farmer", i + 1)
+
+    litres = float(input("Enter litres: "))
+    steps = int(input("Enter steps: "))
+
+    price = base_rate + (steps * step_value)
+
+    if litres > 500:
+        bonus = litres * 0.50
+    else:
+        bonus = 0
+
+    total = (litres * price) + bonus
+
+    print("Milk price: R", round(price, 2))
+    print("Bonus: R", round(bonus, 2))
+    print("Total payment: R", round(total, 2))
+
+print("All farmers processed successfully!")
+
