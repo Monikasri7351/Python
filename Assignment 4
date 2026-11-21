@@ -1,1 +1,15 @@
+=== COLLEGE FEST REGISTRATION SUMMARY ===
+Total Valid Registrations : 4
+Total Errors/Duplicates   : 4
 
+Event-wise Participant Count:
+  - Dance: 2
+  - Music: 3
+  - Coding: 1
+  - Drama: 1
+
+=== ERROR LOG ===
+[cse.txt Line 2] Invalid email: priya_invalid_email
+[cse.txt Line 3] Duplicate Reg No: 101
+[ece.txt Line 2] Damaged line: 202,DamagedLineWithoutEnoughFields
+[Missing File] eee.txt not found.
