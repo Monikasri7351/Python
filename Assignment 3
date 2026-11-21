@@ -1,1 +1,26 @@
 
+contacts = [
+    ("Ravi", "98765 43210", "ravi@gmail.com"),
+    ("Ravi Kumar", "9876543210", "RAVI@gmail.com"),
+    ("Arun", "9988776655", "arun@gmail.com")
+]
+
+merged = {}
+
+for name, phone, email in contacts:
+    phone = ''.join(filter(str.isdigit, phone))
+    email = email.lower().strip()
+
+    if phone in merged:
+        merged[phone]["emails"].add(email)
+    else:
+        merged[phone] = {
+            "name": name,
+            "emails": {email}
+        }
+
+for phone, data in merged.items():
+    print("Name:", data["name"])
+    print("Phone:", phone)
+    print("Email:", data["emails"])
+    print()
